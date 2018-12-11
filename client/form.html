@@ -1,0 +1,31 @@
+<template name='form'>
+    <form>
+        <h1>Inscription</h1>
+
+        <input class="nom" type="text"/>
+           <label>Nom: </label>
+        
+        <input class="prenom" type="text"/>
+            <label>Prénom: </label>
+        
+        <input class="lien" type="text"/>
+            <label>GitHub</label>
+        
+        <button class="btn" type="submit">Submit</button>
+
+    </form>
+
+    <div>
+        <h1>Liste des élèves inscrit</h1>
+        <ul>
+            {{# each list}}
+            <li class="list">
+                {{firstName}}
+                {{lastName}}
+                {{github}}
+            </li>
+            {{/each}}
+        </ul>    
+    </div>
+    
+</template>
